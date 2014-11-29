@@ -24,10 +24,18 @@ namespace WindowsGame1.Engine
 
        }
 
-       public static void refresh()
+       public static void refreshSize() //call after changing resolution or tiles will still scale to old res
        {
-           tileHeight = windowHeight/20;
-           tileWidth = windowWidth/15;
+      windowWidth = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width;
+      windowHeight = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height;
+      gameRes = new Vector2(windowWidth, windowHeight);
+      setTileSize();  //update tile sizes according to new res
+       }
+
+       public static void setTileSize()
+       {
+           tileHeight = windowHeight/15;  //4:3 ratio to preserve tiles as square
+           tileWidth = windowWidth/20;
        }
 
 

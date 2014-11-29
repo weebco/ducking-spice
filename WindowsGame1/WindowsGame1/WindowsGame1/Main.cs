@@ -21,8 +21,9 @@ namespace WindowsGame1
             {
             graphics = new GraphicsDeviceManager(this);
             graphics.IsFullScreen = false;
-            graphics.PreferredBackBufferHeight = 1000;
-            graphics.PreferredBackBufferWidth = 1000;
+            graphics.PreferredBackBufferHeight = 600;
+            graphics.PreferredBackBufferWidth = 800;
+            Engine.MapHandling.setTileSize();
             Content.RootDirectory = "Content";
             }
 
