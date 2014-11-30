@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using WindowsGame1.Actors;
 
 namespace WindowsGame1.Engine
     {
@@ -17,6 +18,13 @@ namespace WindowsGame1.Engine
                    Lists.TileList.Remove(tile);
                }
                Tile.delete(tile);
+           }
+           foreach (Actor actor in Lists.ActorList)
+           {
+               if (!actor.active)
+               {
+                   Actor.delete(actor);
+               }
            }
 
        }

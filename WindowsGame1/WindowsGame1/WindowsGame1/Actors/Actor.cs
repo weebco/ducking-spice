@@ -17,15 +17,15 @@ namespace WindowsGame1.Actors
 
         public enum CLASSES
         {
-            ARCHER,
-            SABER,
-            LANCER,
-            CASTER,
-            BERSERKER,
-            ASSASSIN,
-            DUELIST,
-            SOLDIER,
-            SNIPER
+            ARCHER,  //bows
+            SABER,  //swords
+            LANCER,  //Spears
+            CASTER,  //magic
+            BERSERKER,  //Fists 
+            ASSASSIN,  //knives
+            DUELIST,  //pistols
+            SOLDIER,   //mix of all
+            SNIPER   //rifles
         }
         CLASSES actorClass { get; set; }
 
@@ -36,7 +36,11 @@ namespace WindowsGame1.Actors
         public String Name { get; set; }
         public int HP { get; set; }
         public int Health { get; set; }
-        public int gold { get; set; }
+        public int gold { get; set; }   
+//Bools
+        public Boolean active { get; set; }
+        public Boolean alive { get; set; }
+        public Boolean male { get; set; }
 
 
 //Equip Methods
@@ -97,6 +101,11 @@ namespace WindowsGame1.Actors
             return armorValue;
         }
 
+
+        public void delete(Actor victimActor)
+        {
+            victimActor = null;
+        }
 
 //Boolean Methods
 

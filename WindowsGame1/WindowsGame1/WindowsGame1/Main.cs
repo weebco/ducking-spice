@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
@@ -14,8 +15,8 @@ namespace WindowsGame1
 
     public class Main : Microsoft.Xna.Framework.Game
         {
-        GraphicsDeviceManager graphics;
-        SpriteBatch spriteBatch;
+      public static GraphicsDeviceManager graphics;
+      public  SpriteBatch spriteBatch;
 
         public Main()
             {

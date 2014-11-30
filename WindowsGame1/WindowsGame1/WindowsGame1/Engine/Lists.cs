@@ -13,5 +13,6 @@ namespace WindowsGame1.Engine
        static public     List<Actors.Actor> ActorList = new List<Actor>();
         public static List<Armor.ArmorTypes> ArmorTypesList = new List<Armor.ArmorTypes>();
         public static List<object> InventoryList = new List<object>();
+  
         }
     }

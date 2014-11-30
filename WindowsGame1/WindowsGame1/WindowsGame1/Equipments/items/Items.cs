@@ -10,5 +10,11 @@ namespace WindowsGame1.Equipments.items
         public Boolean isLootable { get; set; }
         public string name { get; set; }
         public int value { get; set; }
+
+
+       static public void delete(Items victimItem)
+       {
+           victimItem = null;
+       }
         }
     }
