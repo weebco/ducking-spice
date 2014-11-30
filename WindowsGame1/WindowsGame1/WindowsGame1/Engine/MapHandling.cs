@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.PeerToPeer.Collaboration;
 using System.Text;
+using System.Threading;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
@@ -38,6 +39,43 @@ namespace WindowsGame1.Engine
            tileWidth = windowWidth/20;
        }
 
+       public static void layoutTiles()
+       {
+           int count = 0;
+           int totalCount = 15*20; //300. Total number of tiles.
+           List<Tile> tileList = new List<Tile>();
+           while (count != totalCount)
+           {
+             count++;
+            Tile tile = new Tile(count);
+            tileList.Add(tile);
+           }
+           foreach (Tile tile in tileList)
+           {
+               if (tile.position < 16)
+               {
+                   tile.coordY = windowHeight/30;
+               }
+               if (tile.position > 15 && tile.position < 31)
+               {
+                   tile.coordY = windowHeight/15 + windowHeight/30;
+               }
+               if (tile.position > 30 && tile.position < 46)
+               {
+                   tile.coordY = windowHeight/15*2 + windowHeight/30;
+               }
+               if (tile.position > 45 && tile.position < 61)
+               {
+                   tile.coordY = ;
+               }
+               if (tile.position > 60 && tile.position < 76)
+               {
+                   tile.coordY = ;
+               }
+           }
+
+
+       }
 
 
 

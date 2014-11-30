@@ -18,7 +18,8 @@ namespace WindowsGame1.Engine
 
         public Boolean isActive = false;
         public TileTypes tileType;
-        int position;
+        public int position;
+        public int coordX, coordY;
 
         public Tile(TileTypes thisTileType, int thisPosition)
         {
@@ -27,6 +28,12 @@ namespace WindowsGame1.Engine
             Lists.TileList.Add(this);
             position = thisPosition;
         }
+
+        public Tile(int newPosition)
+        {
+            position = newPosition;
+        }
+
 
        static public void delete(Tile victimTile )
         {
