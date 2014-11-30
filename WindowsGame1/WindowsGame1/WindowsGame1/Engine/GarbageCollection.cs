@@ -16,13 +16,14 @@ namespace WindowsGame1.Engine
                if (!tile.isActive)
                {
                    Lists.TileList.Remove(tile);
+                   Tile.delete(tile);
                }
-               Tile.delete(tile);
            }
            foreach (Actor actor in Lists.ActorList)
            {
                if (!actor.active)
                {
+                   Lists.ActorList.Remove(actor);
                    Actor.delete(actor);
                }
            }

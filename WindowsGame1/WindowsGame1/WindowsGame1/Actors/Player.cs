@@ -7,8 +7,7 @@ namespace WindowsGame1.Actors
     {
     class Player : Actor
         {
-        public Boolean heavyTrained = false; //able to equip heavy armor
-        public Boolean gunTrained = false; //able to use firearms
+
 
 
 

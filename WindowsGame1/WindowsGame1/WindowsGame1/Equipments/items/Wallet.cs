@@ -9,7 +9,6 @@ namespace WindowsGame1.Equipments.items
     {
         public int gold = 0;
         public int maxGold = 0;
-        public string name;
 
         public enum WalletTypes
         {

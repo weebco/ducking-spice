@@ -119,9 +119,6 @@
     <Compile Include="Engine\SoundLoader.cs" />
     <Compile Include="Engine\ImageLoader.cs" />
     <Compile Include="Equipments\armors\Armor.cs" />
-    <Compile Include="Equipments\armors\Class1.cs" />
-    <Compile Include="Equipments\armors\Class2.cs" />
-    <Compile Include="Equipments\armors\Stats.cs" />
     <Compile Include="Equipments\clothings\Clothing.cs" />
     <Compile Include="Equipments\items\Wallet.cs" />
     <Compile Include="Equipments\items\Items.cs" />

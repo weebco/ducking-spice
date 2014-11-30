@@ -16,16 +16,16 @@ namespace WindowsGame1
     public class Main : Microsoft.Xna.Framework.Game
         {
       public static GraphicsDeviceManager graphics;
-      public  SpriteBatch spriteBatch;
+      public  SpriteBatch spriteBatch;  //not used and can probably remove soon, but leave for now, this is all just default xna code. I offloaded this to a seperate class.
 
         public Main()
             {
-            graphics = new GraphicsDeviceManager(this);
-            graphics.IsFullScreen = false;
-            graphics.PreferredBackBufferHeight = 600;
+            graphics = new GraphicsDeviceManager(this);  //Resolution must be 4:3 or tiles wont be square, this is easy to fix but it makes more sense to just lock the res options honestly.
+            graphics.IsFullScreen = false;         //not all screens are 4:3, and not enabling full screen totally presents that moonrune rpgmaker aesthetic we all know and love
+            graphics.PreferredBackBufferHeight = 600;  
             graphics.PreferredBackBufferWidth = 800;
             Engine.MapHandling.setTileSize();
-            Content.RootDirectory = "Content";
+            Content.RootDirectory = "Content";  //not used, we can probably remove soon, but leave for now, this is all just default xna code. Offloaded to ImageLoader.cs
             }
 
         /// <summary>
@@ -45,12 +45,12 @@ namespace WindowsGame1
         /// LoadContent will be called once per game and is the place to load
         /// all of your content.
         /// </summary>
-        protected override void LoadContent()
+        protected override void LoadContent()  //This section is shit and should be offloaded to ImageLoader.cs otherwise things get really fucking messy
             {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            // TODO: use this.Content to load your game content here
+            // TODO: use this.Content to load your game content here <-- dont believe their lies
             }
 
         /// <summary>
@@ -79,7 +79,7 @@ namespace WindowsGame1
        
  protected override void Draw(GameTime gameTime)
             {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
+            GraphicsDevice.Clear(Color.CornflowerBlue);  //this is an ugly color
 
             // TODO: Draw loop (outsource)
 

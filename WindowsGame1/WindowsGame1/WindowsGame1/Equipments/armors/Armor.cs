@@ -24,6 +24,7 @@ namespace WindowsGame1.Equipments.armors
             SHOES
         }
         public ArmorSlot armorSlot { get; set; }
+        public ArmorTypes armorType { get; set; }
         public int armorValue { get; set; }
 
 
