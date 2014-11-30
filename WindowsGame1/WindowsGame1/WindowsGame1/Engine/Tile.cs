@@ -12,9 +12,14 @@ namespace WindowsGame1.Engine
 
         public enum TileTypes
         {
-            Grass,
-            Dirt,
-            Road
+            Grass,        //76,255,0
+            Dirt,         //127,51,0
+            Road,         //128,128,128
+            Sand,         //255,255
+            Water,        //0,0,255
+            ShallowWater, //0,255,255
+            Wall,         //64,64,64
+            Black         //0,0,0
         };
 
         public Boolean isActive = false;

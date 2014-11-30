@@ -36,7 +36,8 @@ namespace WindowsGame1.Actors //"entities" make it sound like sci fi.  "actors" 
 		public String Name { get; set; }
 		public int HP { get; set; }
 		public int Health { get; set; }
-		public int gold { get; set; }   
+		public int gold { get; set; }
+	    static public int STEP = MapHandling.getTileLength();
 //Bools
 		public Boolean active { get; set; }
 		public Boolean alive { get; set; }
@@ -110,6 +111,12 @@ namespace WindowsGame1.Actors //"entities" make it sound like sci fi.  "actors" 
 		{
 			victimActor = null;
 		}
+
+	    static public void updateStep()
+	    {
+	        STEP = MapHandling.getTileLength();
+	    }
+
 
 //Boolean Methods
 

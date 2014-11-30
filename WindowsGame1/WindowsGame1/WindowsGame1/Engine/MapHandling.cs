@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net.PeerToPeer.Collaboration;
 using System.Text;
 using System.Threading;
+using WindowsGame1.Actors;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
@@ -31,12 +32,19 @@ namespace WindowsGame1.Engine
       windowHeight = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height;
       gameRes = new Vector2(windowWidth, windowHeight);
       setTileSize();  //update tile sizes according to new res
+      Actor.updateStep(); //update step size according to new res
+//TODO if player is not centered on rectangle, then center him.  needed for if res changes, or errors will accumulate over time
        }
 
-       public static void setTileSize()
+       public static void setTileSize()  //tiles should be 40x40 in 800x600
        {
            tileHeight = windowHeight/15;  //4:3 ratio to preserve tiles as square
            tileWidth = windowWidth/20;
+       }
+
+       public static int getTileLength()
+       {
+           return tileHeight;
        }
 
        public static void layoutTiles()
@@ -52,6 +60,7 @@ namespace WindowsGame1.Engine
            }
            foreach (Tile tile in tileList)
            {
+               tile.isActive = true;
                //First, determine y coordinates in the most verbose manner humanly possible
                if (tile.position < 21) //All values assume a height of 600, but should work regardless
                {
@@ -197,8 +206,12 @@ namespace WindowsGame1.Engine
 
                tile.coordX -= 20;
                tile.coordY -= 20;  //adjust for xna being stupid and positioning by top-left corner
-               tile.centerCoord.X = tile.coordX + tileWidth/2;
+               tile.centerCoord.X = tile.coordX + tileWidth/2;  // center is at 20x20 relative in 800x600
                tile.centerCoord.Y = tile.coordY + tileHeight/2;
+               //Sample the color of the collision map at the center point of the tile and determine tile type
+               //Determine whether tile is passable based on second collision map
+               //Draw tiles on top of everything and unload maps to save memory
+            
 
            } //end of foreach
             
