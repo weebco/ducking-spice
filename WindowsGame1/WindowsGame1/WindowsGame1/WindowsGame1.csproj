@@ -110,6 +110,9 @@
     <Compile Include="Actors\Actor.cs" />
     <Compile Include="Actors\Player.cs" />
     <Compile Include="Actors\Enemy.cs" />
+    <Compile Include="Engine\Maps.cs" />
+    <Compile Include="Engine\Objects.cs" />
+    <Compile Include="Engine\Door.cs" />
     <Compile Include="Engine\Constants.cs" />
     <Compile Include="Engine\GameSettings.cs" />
     <Compile Include="Engine\MapHandling.cs" />
@@ -165,7 +168,9 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Events\" />
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\Microsoft.Xna.GameStudio.targets" />
   <!--

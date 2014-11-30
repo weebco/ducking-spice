@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
+using WindowsGame1.Engine;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
@@ -82,7 +83,19 @@ namespace WindowsGame1
             GraphicsDevice.Clear(Color.CornflowerBlue);  //this is an ugly color
 
             // TODO: Draw loop (outsource)
-
+     foreach (Tile tile in Lists.TileList)
+     {  
+        Lists.RectangleList.Add( new Rectangle(tile.coordX, tile.coordY, MapHandling.tileWidth, MapHandling.tileHeight)); //creates a new rectangle where that tile is and adds it to the list
+     }
+     foreach (Rectangle rectangle in Lists.RectangleList)
+     {
+        int position = Lists.RectangleList.IndexOf(rectangle);
+     //giant if statement
+         if (Lists.TileList.ElementAt(position).tileType == Tile.TileTypes.Black)
+         {
+             spriteBatch.Draw(null, rectangle, Color.Black);
+         }
+     }
 
             base.Draw(gameTime);
             }

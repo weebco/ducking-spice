@@ -23,6 +23,9 @@ namespace WindowsGame1.Engine
         };
 
         public Boolean isActive = false;
+        public Boolean isPassable = false;
+        public Boolean isEventTrigger = false;
+        public int eventId = 0;
         public TileTypes tileType;
         public int position;
         public int coordX, coordY;
@@ -48,6 +51,16 @@ namespace WindowsGame1.Engine
             victimTile = null;
         }
 
+        public void setPassable(Tile targetTile)
+        {
+            targetTile.isPassable = true;
+        }
+
+        public void setEvent(Tile targetTile, int targetEventId)
+        {
+            targetTile.isEventTrigger = true;
+            targetTile.eventId = targetEventId;
+        }
 
     }
     }

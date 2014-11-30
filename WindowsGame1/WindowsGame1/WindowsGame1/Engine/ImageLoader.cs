@@ -11,11 +11,11 @@ namespace WindowsGame1
 {
     class ImageLoader
     {
-    //    public static Texture2D /*add list of stuff here*/;
+        public static Texture2D st_00;
         public ImageLoader(ContentManager content)
         {
             content.RootDirectory = "Content";
-//            silverButton = content.Load<Texture2D>("sprites/silverArrow");
+            st_00 = content.Load<Texture2D>("Maps/st_00");
 
 
                 
