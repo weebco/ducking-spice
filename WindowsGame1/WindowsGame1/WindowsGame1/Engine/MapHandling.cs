@@ -25,9 +25,9 @@ namespace WindowsGame1.Engine
        private static int windowWidth = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width;
        private static int windowHeight = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height;
        private static Vector2 gameRes = new Vector2(windowWidth, windowHeight);
-       private static uint myUint;
+       private static uint myUint; //for collision sampling
 
-       public static int tileHeight, tileWidth;
+       public static int tileHeight, tileWidth; //these are the same, condense later
        
 
        public static void setup()
@@ -215,8 +215,8 @@ namespace WindowsGame1.Engine
 
                tile.coordX -= 20;
                tile.coordY -= 20;  //adjust for xna being stupid and positioning by top-left corner
-               tile.centerCoord.X = tile.coordX + tileWidth/2;  // center is at 20x20 relative in 800x600
-               tile.centerCoord.Y = tile.coordY + tileHeight/2;
+               tile.centerCoord.X = tile.coordX + tileWidth/2;  // center is at 20x20 relative in 800x600  
+               tile.centerCoord.Y = tile.coordY + tileHeight/2; //maybe ditch this or switch to two int's instead of vector
                //Sample the color of the collision map at the center point of the tile and determine tile type
                 ImageLoader.st_00.GetData(0, new Rectangle(tile.coordX+tileWidth/2, tile.coordY+tileHeight/2, 1, 1),myUint , 0, 1);
                //Determine whether tile is passable based on second collision map
@@ -224,9 +224,9 @@ namespace WindowsGame1.Engine
             
 
            } //end of foreach
-            
+           count = 0;
 
-               }
+       }
 
 
 

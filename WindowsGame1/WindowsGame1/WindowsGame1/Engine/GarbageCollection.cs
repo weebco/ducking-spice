@@ -6,7 +6,7 @@ using WindowsGame1.Actors;
 
 namespace WindowsGame1.Engine
     {
-   static class GarbageCollection
+   static class GarbageCollection  //c# already has a garbage collector...
         {
 
        public static void CollectGarbage()
