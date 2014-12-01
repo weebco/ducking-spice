@@ -46,6 +46,9 @@ namespace WindowsGame1
         /// LoadContent will be called once per game and is the place to load
         /// all of your content.
         /// </summary>
+
+
+
         protected override void LoadContent()  //This section is shit and should be offloaded to ImageLoader.cs otherwise things get really fucking messy
             {
             // Create a new SpriteBatch, which can be used to draw textures.

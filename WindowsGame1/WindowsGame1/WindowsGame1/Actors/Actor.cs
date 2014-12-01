@@ -9,13 +9,13 @@ namespace WindowsGame1.Actors //"entities" make it sound like sci fi.  "actors" 
 	{
 	class Actor
 		{
-			//armor slots
+	//armor slots
 	public Armor[] ArmorSlotsArray = new Armor[4];
 	// 0=aesthetic, 1=head 2=chest 3=gauntlets 4=boots    This will probably change
 	public Weapon[] WeaponSlotsArray = new Weapon[1];
 	// 0=left, 1=right   This will probably not change
 
-		public enum CLASSES
+		public enum Classes
 		{
 			ARCHER,  //bows
 			SABER,  //swords
@@ -27,7 +27,7 @@ namespace WindowsGame1.Actors //"entities" make it sound like sci fi.  "actors" 
 			SOLDIER,   //mix of all
 			SNIPER   //rifles
 		}
-		CLASSES actorClass { get; set; }
+		Classes actorClass { get; set; }
 
 // statics
 		public static int FirstTimeBow = 0;  //pops up a reminder to equip arrows the first couple of times

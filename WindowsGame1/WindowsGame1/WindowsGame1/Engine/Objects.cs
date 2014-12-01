@@ -12,7 +12,6 @@ namespace WindowsGame1.Engine
             DOOR,
             BENCHLEFT,
             BENCHRIGHT,
-
         }
 
         public ObjectTypes objectType { get; set; }
