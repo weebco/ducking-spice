@@ -73,7 +73,7 @@ namespace WindowsGame1.Engine
                Tile tile = new Tile(count);
                tileList.Add(tile);
            }
-           foreach (Tile tile in tileList)
+           foreach (Tile tile in tileList)   //add elses you fuckwad
            {
                tile.isActive = true;
                //First, determine y coordinates in the most verbose manner humanly possible
