@@ -10,3 +10,4 @@ C:\Users\CJ\Desktop\weebco\ducking-spice\WindowsGame1\WindowsGame1\WindowsGame1\
 C:\Users\CJ\Desktop\weebco\ducking-spice\WindowsGame1\WindowsGame1\WindowsGame1\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\CJ\Desktop\weebco\ducking-spice\WindowsGame1\WindowsGame1\WindowsGame1\obj\x86\Debug\WindowsGame1.exe
 C:\Users\CJ\Desktop\weebco\ducking-spice\WindowsGame1\WindowsGame1\WindowsGame1\obj\x86\Debug\WindowsGame1.pdb
+C:\Users\CJ\Desktop\weebco\ducking-spice\WindowsGame1\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\Maps\st_00.xnb
