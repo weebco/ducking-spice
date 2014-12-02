@@ -81,8 +81,7 @@ namespace WindowsGame1
             // TODO: Gameloop
             SceneHandling.handleScene();  //the individual gameloops for the different menus etc should go in their own section of processScene()
             InputHandling.setInputState();
-            new Actors.Enemy(NavigationPackage.giveCivilianPackage());
-            Console.WriteLine("Made an enemy!");
+
 
 
 
