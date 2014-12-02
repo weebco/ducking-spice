@@ -8,7 +8,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace WindowsGame1.Engine
     {
-    class GameSettings
+    class GameSettings  //Difficulty, Resolution and Controls should all go here.
         {
         public enum Difficulty
         {

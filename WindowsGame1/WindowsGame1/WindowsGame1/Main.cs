@@ -75,6 +75,26 @@ namespace WindowsGame1
             {
 
             // TODO: Gameloop
+            SceneHandling.processScene(SceneHandling.currentScene);  //the individual gameloops for the different menus etc should go in their own section of processScene()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
             base.Update(gameTime);
             }
