@@ -4,11 +4,14 @@ using System.Linq;
 using System.Text;
 using WindowsGame1.Engine;
 using WindowsGame1.Equipments.armors;
+using Microsoft.Xna.Framework.Graphics;
 
 namespace WindowsGame1.Actors //"entities" make it sound like sci fi.  "actors" encompasses that perfect mix where you arent quite sure if its an rpgmaker rip off or a porno
 	{
 	class Actor
-		{
+	{
+    public Texture2D sprite; //Single sprite for now.
+
 	//armor slots
 	public Armor[] ArmorSlotsArray = new Armor[4];
 	// 0=aesthetic, 1=head 2=chest 3=gauntlets 4=boots    This will probably change

@@ -4,6 +4,7 @@ using System.Dynamic;
 using System.Linq;
 using System.Text;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 
 namespace WindowsGame1.Engine
     {
@@ -31,6 +32,7 @@ namespace WindowsGame1.Engine
         public int coordX, coordY;
         public int tileSizeX, tileSizeY;
         public Vector2 centerCoord = new Vector2();
+        public Texture2D sprite;
 
         public Tile(TileTypes thisTileType, int thisPosition)
         {
