@@ -17,7 +17,6 @@ namespace WindowsGame1
         public ImageLoader(ContentManager content)
         {
             content.RootDirectory = "Content";
-            st_00 = content.Load<Texture2D>("Maps/st_00");
             foreach (Maps map in Lists.MapList)
             {
                  map.terrainMap = content.Load<Texture2D>("Maps/" + map.mapId);
