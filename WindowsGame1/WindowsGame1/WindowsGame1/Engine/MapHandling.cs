@@ -73,7 +73,7 @@ namespace WindowsGame1.Engine
                Tile tile = new Tile(count);
                tileList.Add(tile);
            }
-           foreach (Tile tile in tileList)   //add elses you fuckwad
+           foreach (Tile tile in tileList)   //add elses you fuckwad //Done :^)
            {
                tile.isActive = true;
                //First, determine y coordinates in the most verbose manner humanly possible
@@ -81,59 +81,59 @@ namespace WindowsGame1.Engine
                {
                    tile.coordY = windowHeight/30; //20
                }
-               if (tile.position > 20 && tile.position < 41)
+               else if (tile.position > 20 && tile.position < 41)
                {
                    tile.coordY = windowHeight/15 + windowHeight/30; //60
                }
-               if (tile.position > 40 && tile.position < 61)
+               else if (tile.position > 40 && tile.position < 61)
                {
                    tile.coordY = windowHeight/15*2 + windowHeight/30; //100
                }
-               if (tile.position > 60 && tile.position < 81)
+               else if (tile.position > 60 && tile.position < 81)
                {
                    tile.coordY = windowHeight/15*3 + windowHeight/30; //140
                }
-               if (tile.position > 80 && tile.position < 101)
+               else if (tile.position > 80 && tile.position < 101)
                {
                    tile.coordY = windowHeight/15*4 + windowHeight/30; //180
                }
-               if (tile.position > 100 && tile.position < 121)
+               else if (tile.position > 100 && tile.position < 121)
                {
                    tile.coordY = windowHeight/15*5 + windowHeight/30; //220
                }
-               if (tile.position > 120 && tile.position < 141)
+               else if (tile.position > 120 && tile.position < 141)
                {
                    tile.coordY = windowHeight/15*6 + windowHeight/30; //260
                }
-               if (tile.position > 140 && tile.position < 161)
+               else if (tile.position > 140 && tile.position < 161)
                {
                    tile.coordY = windowHeight/15*7 + windowHeight/30; //300
                }
-               if (tile.position > 160 && tile.position < 181)
+               else if (tile.position > 160 && tile.position < 181)
                {
                    tile.coordY = windowHeight/15*8 + windowHeight/30; //340
                }
-               if (tile.position > 180 && tile.position < 201)
+               else if (tile.position > 180 && tile.position < 201)
                {
                    tile.coordY = windowHeight/15*9 + windowHeight/30; //380
                }
-               if (tile.position > 200 && tile.position < 221)
+               else if (tile.position > 200 && tile.position < 221)
                {
                    tile.coordY = windowHeight/15*10 + windowHeight/30; //420
                }
-               if (tile.position > 220 && tile.position < 241)
+               else if (tile.position > 220 && tile.position < 241)
                {
                    tile.coordY = windowHeight/15*11 + windowHeight/30; //460
                }
-               if (tile.position > 240 && tile.position < 261)
+               else if (tile.position > 240 && tile.position < 261)
                {
                    tile.coordY = windowHeight/15*12 + windowHeight/30; //500
                }
-               if (tile.position > 260 && tile.position < 281)
+               else if (tile.position > 260 && tile.position < 281)
                {
                    tile.coordY = windowHeight/15*13 + windowHeight/30; //540
                }
-               if (tile.position > 280 && tile.position < 301)
+               else if (tile.position > 280 && tile.position < 301)
                {
                    tile.coordY = windowHeight/15*14 + windowHeight/30; //580
                }
@@ -142,79 +142,79 @@ namespace WindowsGame1.Engine
                {
                    tile.coordX = windowHeight/40; //20
                }
-               if (tile.position > 15 && tile.position < 31)
+               else if (tile.position > 15 && tile.position < 31)
                {
                    tile.coordX = windowHeight/20 + windowHeight/40; //60
                }
-               if (tile.position > 15 && tile.position < 31)
+               else if (tile.position > 15 && tile.position < 31)
                {
                    tile.coordX = windowHeight/20*2 + windowHeight/40; //100
                }
-               if (tile.position > 30 && tile.position < 46)
+               else if (tile.position > 30 && tile.position < 46)
                {
                    tile.coordX = windowHeight/20*3 + windowHeight/40; //140
                }
-               if (tile.position > 45 && tile.position < 61)
+               else if (tile.position > 45 && tile.position < 61)
                {
                    tile.coordX = windowHeight/20*4 + windowHeight/40; //180
                }
-               if (tile.position > 60 && tile.position < 76)
+               else if (tile.position > 60 && tile.position < 76)
                {
                    tile.coordX = windowHeight/20*5 + windowHeight/40; //220
                }
-               if (tile.position > 75 && tile.position < 91)
+               else if (tile.position > 75 && tile.position < 91)
                {
                    tile.coordX = windowHeight/20*6 + windowHeight/40; //260
                }
-               if (tile.position > 90 && tile.position < 106)
+               else if (tile.position > 90 && tile.position < 106)
                {
                    tile.coordX = windowHeight/20*7 + windowHeight/40; //300
                }
-               if (tile.position > 105 && tile.position < 121)
+               else if (tile.position > 105 && tile.position < 121)
                {
                    tile.coordX = windowHeight/20*8 + windowHeight/40; //340
                }
-               if (tile.position > 120 && tile.position < 136)
+               else if (tile.position > 120 && tile.position < 136)
                {
                    tile.coordX = windowHeight/20*9 + windowHeight/40; //380
                }
-               if (tile.position > 135 && tile.position < 151)
+               else if (tile.position > 135 && tile.position < 151)
                {
                    tile.coordX = windowHeight/20*10 + windowHeight/40; //420
                }
-               if (tile.position > 150 && tile.position < 166)
+               else if (tile.position > 150 && tile.position < 166)
                {
                    tile.coordX = windowHeight/20*11 + windowHeight/40; //460
                }
-               if (tile.position > 165 && tile.position < 181)
+               else if (tile.position > 165 && tile.position < 181)
                {
                    tile.coordX = windowHeight/20*12 + windowHeight/40; //500
                }
-               if (tile.position > 180 && tile.position < 196)
+               else if (tile.position > 180 && tile.position < 196)
                {
                    tile.coordX = windowHeight/20*13 + windowHeight/40; //540
                }
-               if (tile.position > 195 && tile.position < 211)
+               else if (tile.position > 195 && tile.position < 211)
                {
                    tile.coordX = windowHeight/20*14 + windowHeight/40; //580
                }
-               if (tile.position > 210 && tile.position < 226)
+               else if (tile.position > 210 && tile.position < 226)
                {
                    tile.coordX = windowHeight/20*15 + windowHeight/40; //620
                }
-               if (tile.position > 225 && tile.position < 241)
+               else if (tile.position > 225 && tile.position < 241)
                {
                    tile.coordX = windowHeight/20*16 + windowHeight/40; //660
                }
-               if (tile.position > 240 && tile.position < 256)
+               else if (tile.position > 240 && tile.position < 256)
                {
                    tile.coordX = windowHeight/20*17 + windowHeight/40; //700
                }
-               if (tile.position > 255 && tile.position < 271)
+               else if (tile.position > 255 && tile.position < 271)
                {
                    tile.coordX = windowHeight/20*18 + windowHeight/40; //740
                }
-               if (tile.position > 270 && tile.position < 286)
+               else if (tile.position > 270 && tile.position < 286)
                {
                    tile.coordX = windowHeight/20*19 + windowHeight/40; //780
                }
