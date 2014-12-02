@@ -16,7 +16,7 @@ namespace WindowsGame1
     class ImageLoader
     {
         public static Texture2D st_00;
-        public  ImageLoader(ContentManager content) //We -probably- need to add file extensions to these
+        public  ImageLoader(ContentManager content) //We -probably- need to add file extensions to these  <-- definitely dont do this 
         {
             Console.WriteLine("Now loading content...");
             content.RootDirectory = "Content";
@@ -24,7 +24,7 @@ namespace WindowsGame1
             {
                 try
                 {
-                    map.terrainMap = content.Load<Texture2D>("Maps/" + map.mapId + ".png");
+                    map.terrainMap = content.Load<Texture2D>("Maps/" + map.mapId);
                     Console.WriteLine("Loaded Map: " + map.mapId);
                 }
                 catch
@@ -44,6 +44,7 @@ namespace WindowsGame1
                 }
                 catch
                 {
+                    Console.WriteLine("Item: " +item.name + " has failed to load!");
                     //FNF
                 }
                 
