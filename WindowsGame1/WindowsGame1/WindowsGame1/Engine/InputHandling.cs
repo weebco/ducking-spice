@@ -9,7 +9,7 @@ namespace WindowsGame1.Engine
    public static class InputHandling //catches and processes input.  Called by SceneHandling
         {
            public static KeyboardState keyHandler = new KeyboardState();
-            public static KeyboardState oldKeyHanlder = new KeyboardState();
+            public static KeyboardState oldKeyHandler = new KeyboardState();
            public static MouseState mouseHandler = new MouseState();
             public static MouseState oldMouseHandler = new MouseState();
 
@@ -21,7 +21,16 @@ namespace WindowsGame1.Engine
 
        public static bool inputHasChanged()
        {
-           if (keyHandler == oldKeyHanlder && !mouseButtonHasChanged())
+           if (keyHandler == oldKeyHandler && !mouseButtonHasChanged())
+           {
+               return false;
+           }
+           return true;
+       }
+
+       public static bool buttonWasPressed(Keys key)
+       {
+           if (keyHandler == oldKeyHandler || !oldKeyHandler.IsKeyDown(key)   )
            {
                return false;
            }
@@ -44,7 +53,7 @@ namespace WindowsGame1.Engine
        public static void handleInput()
        {
  
-           oldKeyHanlder = keyHandler;
+           oldKeyHandler = keyHandler;
            oldMouseHandler = mouseHandler;
            setInputState();
            switch (SceneHandling.currentScene)
@@ -71,13 +80,17 @@ case SceneHandling.Scenes.CharacterSelection:
                    break;
 
 case SceneHandling.Scenes.Ingame:
-                   if (inputHasChanged())
+                   if (buttonWasPressed(Keys.P))
                    {
-                       SceneHandling.advanceScene();
+                       SceneHandling.setScene(SceneHandling.Scenes.Paused);
                    }
                    break;
 
 case SceneHandling.Scenes.Paused:
+                   if (buttonWasPressed(Keys.P))
+                   {
+                       SceneHandling.setScene(SceneHandling.Scenes.Ingame);
+                   }
                    break;
 
 case SceneHandling.Scenes.TESTZONE:

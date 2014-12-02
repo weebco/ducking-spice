@@ -44,7 +44,7 @@ namespace WindowsGame1
                 }
                 catch
                 {
-                    Console.WriteLine("Item: " +item.name + " has failed to load!");
+                    Console.WriteLine("Item: " + item.name + " has failed to load!");
                     //FNF
                 }
                 
@@ -65,7 +65,7 @@ namespace WindowsGame1
                 }
                 catch
                 {
-                    Console.WriteLine("Actor: " +actor.name + " has failed to load!");
+                    Console.WriteLine("Actor: " + actor.name + " has failed to load!");
 
                     //FNF
                 }
@@ -80,6 +80,7 @@ namespace WindowsGame1
                 }
                 catch
                 {
+                    Console.WriteLine("Salamander *Wiggle*");
                     //FNF
                 }
             }
