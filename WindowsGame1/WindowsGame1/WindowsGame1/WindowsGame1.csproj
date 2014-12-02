@@ -110,6 +110,7 @@
     <Compile Include="Actors\Actor.cs" />
     <Compile Include="Actors\Player.cs" />
     <Compile Include="Actors\Enemy.cs" />
+    <Compile Include="Engine\Class1.cs" />
     <Compile Include="Engine\SceneHandling.cs" />
     <Compile Include="Engine\InputHandling.cs" />
     <Compile Include="Engine\Maps.cs" />

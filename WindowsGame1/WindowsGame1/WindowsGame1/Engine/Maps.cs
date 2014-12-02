@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Xml;
+using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Net;
 
 namespace WindowsGame1.Engine
@@ -18,6 +19,7 @@ namespace WindowsGame1.Engine
         public string objectMapId;
         public Boolean hasActorMap;
         public string actorMapId;
+        public Texture2D terrainMap;
 
 
 
@@ -28,6 +30,7 @@ namespace WindowsGame1.Engine
             string id;
             name = "start";
             id = "st_00";
+            
 
             new Maps(name, id, false, false, false);
         }

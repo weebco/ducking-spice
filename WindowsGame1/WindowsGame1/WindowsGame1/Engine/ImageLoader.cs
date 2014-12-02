@@ -20,7 +20,7 @@ namespace WindowsGame1
             st_00 = content.Load<Texture2D>("Maps/st_00");
             foreach (Maps map in Lists.MapList)
             {
-                 Texture2D map.mapId. = content.Load<Texture2D>("Maps/" + map.mapId);
+                 map.terrainMap = content.Load<Texture2D>("Maps/" + map.mapId);
             }
 
 
