@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Microsoft.Xna.Framework.Input;
+﻿using Microsoft.Xna.Framework.Input;
 
-namespace WindowsGame1.Engine
+namespace WindowsGame1.Engine.Handlers
     {
    public static class InputHandling //catches and processes input.  Called by SceneHandling
         {

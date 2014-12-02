@@ -1,16 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using WindowsGame1.Engine;
+using WindowsGame1.Actors;
 
-namespace WindowsGame1.Actors
+namespace WindowsGame1.Engine.Actors
     {
     class Enemy : Actor
         {
 
 
-        public Enemy(NavigationPackage newNavigationPackage)
+        public Enemy(String name, Classes actorClass, NavigationPackage newNavigationPackage) : base(name, actorClass)
         {
             navigationPackage = newNavigationPackage;
             Lists.ActorList.Add(this);

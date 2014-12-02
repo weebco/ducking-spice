@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Net.PeerToPeer.Collaboration; //black magic, do not touch
-using System.Text;
-using System.Threading;
-using WindowsGame1.Actors;
+using WindowsGame1.Engine.Actors;
+using WindowsGame1.Engine.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
@@ -23,7 +20,7 @@ TL;DR:
 4. Activation (abstract)
 */
 
-namespace WindowsGame1.Engine
+namespace WindowsGame1.Engine.Handlers
     {
    static class MapHandling
    {

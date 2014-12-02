@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
-namespace WindowsGame1.Engine
+namespace WindowsGame1.Engine.Handlers
     {
    static class SceneHandling  //this class contains the gameloops, segregated by menu to simplify input control
         {

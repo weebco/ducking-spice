@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
-namespace WindowsGame1.Equipments.items
+namespace WindowsGame1.Engine.GameItems.Equipments
     {
     class Wallet : Items
     {
@@ -19,7 +16,7 @@ namespace WindowsGame1.Equipments.items
 
         public WalletTypes walletType;
 
-        public Wallet(WalletTypes newWalletType, int money)
+        public Wallet(String name, WalletTypes newWalletType, int money, Boolean isLootable) : base(isLootable, name)
         {
             gold += money;
             walletType = newWalletType;

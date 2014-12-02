@@ -1,14 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
-namespace WindowsGame1.Equipments.armors
+namespace WindowsGame1.Engine.GameItems.Equipments.Weapons
     {
-    public  class Weapon : items.Items
+    public  class Weapon : Equipment
         {
-
-
 
         public enum WeaponSlot
         {
@@ -16,7 +11,7 @@ namespace WindowsGame1.Equipments.armors
             RIGHT //1
         }
 
-        public enum WeaponType
+        public enum WeaponType //TODO: These probably all eventually have to become subclasses, as these all would have unique mechanics
         {
             SWORD,
             SPEAR,
@@ -32,7 +27,15 @@ namespace WindowsGame1.Equipments.armors
         public WeaponSlot weaponSlot;
         public WeaponType weaponType;
         public int attackValue { get; set; }
-        public int attackSpeed { get; set; }
+        public int attackSpeed { get; set; } //Should probably be a float, if game speed will be measured in seconds
+
+        public Weapon(String name, WeaponSlot weaponSlot, WeaponType weaponType, int attackValue, int attackSpeed, Boolean isLootable, int durability) : base(name, isLootable, durability)
+        {
+            this.weaponSlot = weaponSlot;
+            this.weaponType = weaponType;
+            this.attackValue = attackValue;
+            this.attackSpeed = attackSpeed;
+        }
         
 //public methods
         public Boolean isBow()

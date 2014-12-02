@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using WindowsGame1.Equipments.items;
 
-namespace WindowsGame1.Equipments.armors
+namespace WindowsGame1.Engine.GameItems.Equipments.Armors
     {
-    public  class Armor : Items
+    public  class Armor : Equipment
         {
 
         public enum ArmorTypes
@@ -27,7 +23,12 @@ namespace WindowsGame1.Equipments.armors
         public ArmorTypes armorType { get; set; }
         public int armorValue { get; set; }
 
-
+        public Armor(String name, ArmorSlot armorSlot, ArmorTypes armorType, int armorValue, Boolean isLootable, int durability) : base(name, isLootable, durability)
+        {
+            this.armorSlot = armorSlot;
+            this.armorType = armorType;
+            this.armorValue = armorValue;
+        }
 
         }
     }

@@ -1,17 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using WindowsGame1.Actors;
-using WindowsGame1.Engine;
-using WindowsGame1.Equipments.items;
-using Microsoft.Xna.Framework;
+using WindowsGame1.Engine.Actors;
+using WindowsGame1.Engine.GameItems;
+using WindowsGame1.Engine.World;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
 
-namespace WindowsGame1
+namespace WindowsGame1.Engine.Handlers
 {
     class ImageLoader
     {
@@ -36,9 +30,9 @@ namespace WindowsGame1
             }
 
             //Looks like armor is of type item, so loading all the items in the InventoryList should load the sprites for all the armors as well...   
-            //^ TODO: add an item list and put it here.  Inventory list is just for inventory and happens to be of type item cause of that
+            //^ DONE: add an item list and put it here.  Inventory list is just for inventory and happens to be of type item cause of that
             //TODO: add equipment class with shit like durability, have it inhereit from Item class then have weapons and armor inhereit from Equipment class
-            foreach (Items item in Lists.InventoryList) //ITEM SPRITE LOADING
+            foreach (Items item in Lists.ItemList) //ITEM SPRITE LOADING
             {
                 try
                 {

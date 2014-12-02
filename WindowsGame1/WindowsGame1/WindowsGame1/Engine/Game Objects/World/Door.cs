@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
- 
-namespace WindowsGame1.Engine  //this probably doesn't belong in this namespace. Make objects namespace?
+
+namespace WindowsGame1.Engine.World  //this probably doesn't belong in this namespace. Make objects namespace?
    {
     class Door : Objects
     {

@@ -4,6 +4,8 @@ using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using WindowsGame1.Actors;
 using WindowsGame1.Engine;
+using WindowsGame1.Engine.Handlers;
+using WindowsGame1.Engine.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
@@ -26,7 +28,7 @@ namespace WindowsGame1
             graphics.IsFullScreen = false;         //not all screens are 4:3, and not enabling full screen totally presents that moonrune rpgmaker aesthetic we all know and love
             graphics.PreferredBackBufferHeight = 600;  
             graphics.PreferredBackBufferWidth = 800;
-            Engine.MapHandling.setTileSize();
+            MapHandling.setTileSize();
             Content.RootDirectory = "Content";  //not used, we can probably remove soon, but leave for now, this is all just default xna code. Offloaded to ImageLoader.cs
             }
 

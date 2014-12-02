@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace WindowsGame1.Equipments.items
+namespace WindowsGame1.Engine.GameItems
     {
    public class Items
         {
@@ -13,6 +10,12 @@ namespace WindowsGame1.Equipments.items
         public int value { get; set; }
         public Texture2D sprite;
 
+
+       public Items(Boolean isLootable, String name)
+       {
+           this.isLootable = isLootable;
+           this.name = name;
+       }
 
        static public void delete(Items victimItem)
        {

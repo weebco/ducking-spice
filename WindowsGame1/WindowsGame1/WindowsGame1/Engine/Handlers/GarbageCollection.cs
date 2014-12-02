@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using WindowsGame1.Actors;
+﻿using WindowsGame1.Engine.Actors;
+using WindowsGame1.Engine.World;
 
-namespace WindowsGame1.Engine
+namespace WindowsGame1.Engine.Handlers
     {
    static class GarbageCollection  //c# already has a garbage collector...
         {
