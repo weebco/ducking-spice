@@ -10,8 +10,9 @@ namespace WindowsGame1.Actors
         {
 
 
-        public Enemy()
+        public Enemy(NavigationPackage newNavigationPackage)
         {
+            navigationPackage = newNavigationPackage;
             Lists.ActorList.Add(this);
         }
 

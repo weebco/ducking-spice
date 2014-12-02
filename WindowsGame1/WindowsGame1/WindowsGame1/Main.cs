@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
+using WindowsGame1.Actors;
 using WindowsGame1.Engine;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
@@ -80,8 +81,8 @@ namespace WindowsGame1
             // TODO: Gameloop
             SceneHandling.handleScene();  //the individual gameloops for the different menus etc should go in their own section of processScene()
             InputHandling.setInputState();
-
-
+            new Actors.Enemy(NavigationPackage.giveCivilianPackage());
+            Console.WriteLine("Made an enemy!");
 
 
 

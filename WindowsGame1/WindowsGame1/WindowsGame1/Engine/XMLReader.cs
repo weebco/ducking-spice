@@ -5,6 +5,8 @@ using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework;
 using System.Xml;
 
+//TODO fix paths and whatnot, add to proper namespace
+
 
 public class XMLReader
 {

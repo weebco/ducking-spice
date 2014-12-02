@@ -10,13 +10,14 @@ namespace WindowsGame1.Actors //"entities" make it sound like sci fi.  "actors" 
 	{
 	class Actor
 	{
-    public Texture2D sprite; //Single sprite for now.
+	public Texture2D sprite; //Single sprite for now.
 
 	//armor slots
 	public Armor[] ArmorSlotsArray = new Armor[4];
 	// 0=aesthetic, 1=head 2=chest 3=gauntlets 4=boots    This will probably change
 	public Weapon[] WeaponSlotsArray = new Weapon[1];
 	// 0=left, 1=right   This will probably not change
+	    public NavigationPackage navigationPackage;
 
 		public enum Classes
 		{
@@ -37,11 +38,11 @@ namespace WindowsGame1.Actors //"entities" make it sound like sci fi.  "actors" 
 
 //Fields
 		public String name { get; set; }
-        public int actorID { get; set; }
+		public int actorID { get; set; }
 		public int HP { get; set; }
 		public int Health { get; set; }
 		public int gold { get; set; }
-	    static public int STEP = MapHandling.getTileLength();
+		static public int STEP = MapHandling.getTileLength();
 //Bools
 		public Boolean active { get; set; }
 		public Boolean alive { get; set; }
@@ -116,10 +117,10 @@ namespace WindowsGame1.Actors //"entities" make it sound like sci fi.  "actors" 
 			victimActor = null;
 		}
 
-	    static public void updateStep()
-	    {
-	        STEP = MapHandling.getTileLength();
-	    }
+		static public void updateStep()
+		{
+			STEP = MapHandling.getTileLength();
+		}
 
 
 //Boolean Methods

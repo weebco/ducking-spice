@@ -35,7 +35,9 @@ namespace WindowsGame1
                  
             }
 
-            //Looks like armor is of type item, so loading all the items in the InventoryList should load the sprites for all the armors as well...
+            //Looks like armor is of type item, so loading all the items in the InventoryList should load the sprites for all the armors as well...   
+            //^ TODO: add an item list and put it here.  Inventory list is just for inventory and happens to be of type item cause of that
+            //TODO: add equipment class with shit like durability, have it inhereit from Item class then have weapons and armor inhereit from Equipment class
             foreach (Items item in Lists.InventoryList) //ITEM SPRITE LOADING
             {
                 try
