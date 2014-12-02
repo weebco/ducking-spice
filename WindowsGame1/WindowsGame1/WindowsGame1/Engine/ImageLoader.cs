@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
+using WindowsGame1.Engine;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
@@ -16,6 +18,10 @@ namespace WindowsGame1
         {
             content.RootDirectory = "Content";
             st_00 = content.Load<Texture2D>("Maps/st_00");
+            foreach (Maps map in Lists.MapList)
+            {
+                 Texture2D map.mapId. = content.Load<Texture2D>("Maps/" + map.mapId);
+            }
 
 
                 

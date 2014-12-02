@@ -13,8 +13,11 @@ namespace WindowsGame1.Engine
         public string mapName; //display
         public string mapId; //internal. 
         public Boolean hasCollisionMap;
+        public string collisionMapId;
         public Boolean hasObjectMap;
+        public string objectMapId;
         public Boolean hasActorMap;
+        public string actorMapId;
 
 
 

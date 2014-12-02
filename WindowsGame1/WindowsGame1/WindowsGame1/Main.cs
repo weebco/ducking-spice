@@ -39,6 +39,8 @@ namespace WindowsGame1
             {
             // TODO: Add your initialization logic here
 
+            SceneHandling.currentScene = SceneHandling.Scenes.Splash; //set initial screen to splash.  It will do this by default anyway, but just to be safe.
+            
             base.Initialize();
             }
 
@@ -75,7 +77,8 @@ namespace WindowsGame1
             {
 
             // TODO: Gameloop
-            SceneHandling.processScene(SceneHandling.currentScene);  //the individual gameloops for the different menus etc should go in their own section of processScene()
+            SceneHandling.handleScene();  //the individual gameloops for the different menus etc should go in their own section of processScene()
+            InputHandling.setInputState();
 
 
 
