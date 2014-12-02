@@ -60,11 +60,13 @@ namespace WindowsGame1
                     }
                     else
                     {
-                        actor.sprite = content.Load<Texture2D>("Actors/" + actor.actorName);
+                        actor.sprite = content.Load<Texture2D>("Actors/" + actor.name);
                     }
                 }
                 catch
                 {
+                    Console.WriteLine("Actor: " +actor.name + " has failed to load!");
+
                     //FNF
                 }
             }

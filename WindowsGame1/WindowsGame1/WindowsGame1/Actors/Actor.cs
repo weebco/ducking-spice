@@ -36,7 +36,7 @@ namespace WindowsGame1.Actors //"entities" make it sound like sci fi.  "actors" 
 		public static int FirstTimeBow = 0;  //pops up a reminder to equip arrows the first couple of times
 
 //Fields
-		public String actorName { get; set; }
+		public String name { get; set; }
         public int actorID { get; set; }
 		public int HP { get; set; }
 		public int Health { get; set; }
