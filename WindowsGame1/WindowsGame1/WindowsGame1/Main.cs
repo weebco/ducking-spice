@@ -40,7 +40,7 @@ namespace WindowsGame1
             // TODO: Add your initialization logic here
 
             SceneHandling.currentScene = SceneHandling.Scenes.Splash; //set initial screen to splash.  It will do this by default anyway, but just to be safe.
-            
+            Engine.Maps.generateMaps();
             base.Initialize();
             }
 
@@ -55,6 +55,7 @@ namespace WindowsGame1
             {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
+            new ImageLoader(Content);
 
             // TODO: use this.Content to load your game content here <-- dont believe their lies
             }

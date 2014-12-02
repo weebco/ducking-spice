@@ -20,11 +20,12 @@ namespace WindowsGame1.Engine
         public Boolean hasActorMap;
         public string actorMapId;
         public Texture2D terrainMap;
+        public Texture2D collisionMap;
 
 
 
 
-        public void generateMaps()  //preload all maps, this is gonna get long so maybe offload later?
+        public static void generateMaps()  //preload all maps, this is gonna get long so maybe offload later?
         {
             string name;
             string id;
