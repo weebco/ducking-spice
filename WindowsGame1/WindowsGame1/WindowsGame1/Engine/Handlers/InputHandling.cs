@@ -86,6 +86,7 @@ case SceneHandling.Scenes.Paused:
                    if (buttonWasPressed(Keys.P))
                    {
                        SceneHandling.setScene(SceneHandling.Scenes.Ingame);
+                       MapHandling.reDraw = true;
                    }
                    break;
 

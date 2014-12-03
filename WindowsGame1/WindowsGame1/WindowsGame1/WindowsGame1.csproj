@@ -107,6 +107,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Engine\Game Objects\World\Tiles\TileTypes.cs" />
+    <Compile Include="Engine\Game Objects\World\Tiles\TileTypesNamespace\Black.cs" />
+    <Compile Include="Engine\Game Objects\World\Tiles\TileTypesNamespace\Wall.cs" />
+    <Compile Include="Engine\Game Objects\World\Tiles\TileTypesNamespace\Grass.cs" />
+    <Compile Include="Engine\Game Objects\World\Tiles\TileTypesNamespace\Road.cs" />
+    <Compile Include="Engine\Game Objects\World\Tiles\TileTypesNamespace\Sand.cs" />
+    <Compile Include="Engine\Game Objects\World\Tiles\TileTypesNamespace\Dirt.cs" />
+    <Compile Include="Engine\Game Objects\World\Tiles\TileTypesNamespace\ShallowWater.cs" />
+    <Compile Include="Engine\Game Objects\World\Tiles\TileTypesNamespace\Water.cs" />
+    <Compile Include="Engine\Handlers\ScreenHandling.cs" />
+    <Compile Include="Engine\Screens.cs" />
     <Compile Include="Engine\Game Objects\Actors\Actor.cs" />
     <Compile Include="Engine\Game Objects\Actors\NavigationPackage.cs" />
     <Compile Include="Engine\Game Objects\Actors\Player.cs" />
@@ -117,16 +128,16 @@
     <Compile Include="Engine\Handlers\InputHandling.cs" />
     <Compile Include="Engine\Maps.cs" />
     <Compile Include="Engine\Game Objects\World\Objects.cs" />
-    <Compile Include="Engine\Game Objects\World\Door.cs" />
+    <Compile Include="Engine\Game Objects\World\World Objects\Door.cs" />
     <Compile Include="Engine\Constants.cs" />
     <Compile Include="Engine\GameSettings.cs" />
     <Compile Include="Engine\Handlers\MapHandling.cs" />
     <Compile Include="Engine\Lists.cs" />
     <Compile Include="Engine\Handlers\GarbageCollection.cs" />
     <Compile Include="Engine\Handlers\CollisionHandling.cs" />
-    <Compile Include="Engine\Game Objects\World\Tile.cs" />
-    <Compile Include="Engine\Handlers\SoundLoader.cs" />
-    <Compile Include="Engine\Handlers\ImageLoader.cs" />
+    <Compile Include="Engine\Game Objects\World\Tiles\Tile.cs" />
+    <Compile Include="Engine\Loaders\SoundLoader.cs" />
+    <Compile Include="Engine\Loaders\ImageLoader.cs" />
     <Compile Include="Engine\Game Objects\GameItems\Equipments\Armors\Armor.cs" />
     <Compile Include="Engine\Game Objects\GameItems\Equipments\Clothings\Clothing.cs" />
     <Compile Include="Engine\Game Objects\GameItems\Equipments\Wallet.cs" />

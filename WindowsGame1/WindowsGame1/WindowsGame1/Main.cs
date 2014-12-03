@@ -2,8 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
+using System.Threading;
 using WindowsGame1.Actors;
 using WindowsGame1.Engine;
+using WindowsGame1.Engine.Game_Objects.World.Tiles;
 using WindowsGame1.Engine.Handlers;
 using WindowsGame1.Engine.World;
 using Microsoft.Xna.Framework;
@@ -41,10 +43,13 @@ namespace WindowsGame1
         protected override void Initialize()
             {
             // TODO: Add your initialization logic here
-
+            Console.WriteLine("Initializing...");
             SceneHandling.currentScene = SceneHandling.Scenes.Splash; //set initial screen to splash.  It will do this by default anyway, but just to be safe.
             Engine.Maps.generateMaps();
+            Engine.Screens.generateScreens();
+            Rectangle backRectangle = new Rectangle(graphics.PreferredBackBufferWidth/2, graphics.PreferredBackBufferHeight/2, graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight);
             base.Initialize();
+            Console.WriteLine("Initialization Complete");
             }
 
         /// <summary>
@@ -83,7 +88,10 @@ namespace WindowsGame1
             // TODO: Gameloop
             SceneHandling.handleScene();  //the individual gameloops for the different menus etc should go in their own section of processScene()
             InputHandling.setInputState();
-
+            if (MapHandling.reDraw && SceneHandling.currentScene == SceneHandling.Scenes.Ingame)
+            {
+                MapHandling.layoutTiles();
+            }
 
 
 
@@ -109,24 +117,32 @@ namespace WindowsGame1
        
  protected override void Draw(GameTime gameTime)
             {
-            GraphicsDevice.Clear(Color.CornflowerBlue);  //this is an ugly color
+            Console.WriteLine("Draw Loop Begin");
+GraphicsDevice.Clear(Color.White);
+spriteBatch.Begin();
 
-            // TODO: Draw loop (outsource)
      foreach (Tile tile in Lists.TileList)
-     {  
-        Lists.RectangleList.Add( new Rectangle(tile.coordX, tile.coordY, MapHandling.tileWidth, MapHandling.tileHeight)); //creates a new rectangle where that tile is and adds it to the list
-     }
-     foreach (Rectangle rectangle in Lists.RectangleList)
      {
-        int position = Lists.RectangleList.IndexOf(rectangle);
-     //giant if statement
-         if (Lists.TileList.ElementAt(position).tileType == Tile.TileTypes.Black)
-         {
-             spriteBatch.Draw(null, rectangle, Color.Black);
-         }
+         spriteBatch.Draw(TileTypes.determineTileTexture(tile), new Rectangle(tile.coordX, tile.coordY, MapHandling.tileWidth, MapHandling.tileHeight), Color.White );
      }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+            spriteBatch.End();
             base.Draw(gameTime);
+         Console.WriteLine("Draw Loop End");
+      // Thread.Sleep(2000);
             }
         }
     }

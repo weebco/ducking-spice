@@ -18,3 +18,12 @@ C:\Users\sim90_000\Documents\GitHub\ducking-spice\WindowsGame1\WindowsGame1\Wind
 C:\Users\sim90_000\Documents\GitHub\ducking-spice\WindowsGame1\WindowsGame1\WindowsGame1\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\sim90_000\Documents\GitHub\ducking-spice\WindowsGame1\WindowsGame1\WindowsGame1\obj\x86\Debug\WindowsGame1.exe
 C:\Users\sim90_000\Documents\GitHub\ducking-spice\WindowsGame1\WindowsGame1\WindowsGame1\obj\x86\Debug\WindowsGame1.pdb
+C:\Users\CJ\Desktop\weebco\ducking-spice\WindowsGame1\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\Screens\splash.xnb
+C:\Users\CJ\Desktop\weebco\ducking-spice\WindowsGame1\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\Tiles\Black.xnb
+C:\Users\CJ\Desktop\weebco\ducking-spice\WindowsGame1\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\Tiles\Water.xnb
+C:\Users\CJ\Desktop\weebco\ducking-spice\WindowsGame1\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\Tiles\Grass.xnb
+C:\Users\CJ\Desktop\weebco\ducking-spice\WindowsGame1\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\Tiles\Road.xnb
+C:\Users\CJ\Desktop\weebco\ducking-spice\WindowsGame1\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\Tiles\Sand.xnb
+C:\Users\CJ\Desktop\weebco\ducking-spice\WindowsGame1\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\Tiles\ShallowWater.xnb
+C:\Users\CJ\Desktop\weebco\ducking-spice\WindowsGame1\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\Tiles\Wall.xnb
+C:\Users\CJ\Desktop\weebco\ducking-spice\WindowsGame1\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\Tiles\Dirt.xnb

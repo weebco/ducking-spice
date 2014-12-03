@@ -5,6 +5,9 @@ namespace WindowsGame1.Engine.Handlers
    static class SceneHandling  //this class contains the gameloops, segregated by menu to simplify input control
         {
 
+
+
+
        public enum Scenes
         {
             Splash = 0, //Progression through menu screens is handled via currentScene++;
@@ -16,7 +19,7 @@ namespace WindowsGame1.Engine.Handlers
         }
 
        public static Scenes currentScene = new Scenes(); //backing
-
+       public static Boolean reDraw = true;
 
 
 
@@ -24,6 +27,7 @@ namespace WindowsGame1.Engine.Handlers
        {
            Console.WriteLine("Switching from " + currentScene + " to " + (currentScene+1));  //use this to check everything is working
            currentScene++;
+           reDraw = true;
            Console.WriteLine("Now arriving at " + currentScene);
        }
 
@@ -31,6 +35,7 @@ namespace WindowsGame1.Engine.Handlers
        {
            Console.WriteLine("Switching from " + currentScene + " to " + targetScene);  //use this to check everything is working
            currentScene = targetScene;
+           reDraw = true;
            Console.WriteLine("Now arriving at " + currentScene);
        }
 

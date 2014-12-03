@@ -1,6 +1,8 @@
 ﻿using System;
 using WindowsGame1.Engine.Actors;
 using WindowsGame1.Engine.GameItems;
+using WindowsGame1.Engine.Game_Objects.World.Tiles;
+using WindowsGame1.Engine.Game_Objects.World.Tiles.TileTypesNamespace;
 using WindowsGame1.Engine.World;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
@@ -28,6 +30,20 @@ namespace WindowsGame1.Engine.Handlers
                 }
                  
             }
+            foreach (Screens screen in Lists.ScreenList) //Splash, main menu background, stuff like that
+            {
+                try
+                {
+                    screen.screenTexture = content.Load<Texture2D>("Screens/" + screen.screenName);
+                    Console.WriteLine("Loaded Screen: " + screen.screenName);
+                }
+                catch
+                {
+                    Console.WriteLine("Screen: " + screen.screenName + " has failed to load!");
+                    //FNF. ignoring for now.
+                }
+                 
+            }
 
             //Looks like armor is of type item, so loading all the items in the InventoryList should load the sprites for all the armors as well...   
             //^ DONE: add an item list and put it here.  Inventory list is just for inventory and happens to be of type item cause of that
@@ -37,6 +53,7 @@ namespace WindowsGame1.Engine.Handlers
                 try
                 {
                     item.sprite = content.Load<Texture2D>("Items/" + item.name); //Guessing future name of the directory, change later if necessary
+                    Console.WriteLine("Loaded Item: " + item.name);
                 }
                 catch
                 {
@@ -46,6 +63,28 @@ namespace WindowsGame1.Engine.Handlers
                 
             }
 
+
+      
+                String tileDir = "Tiles/";
+                Game_Objects.World.Tiles.TileTypesNamespace.Black.tileTexture =
+                    content.Load<Texture2D>(tileDir + Black.name);
+                Game_Objects.World.Tiles.TileTypesNamespace.Dirt.tileTexture =
+                    content.Load<Texture2D>(tileDir + Dirt.name);
+                Game_Objects.World.Tiles.TileTypesNamespace.Grass.tileTexture =
+                    content.Load<Texture2D>(tileDir + Grass.name);
+                Game_Objects.World.Tiles.TileTypesNamespace.Road.tileTexture =
+                    content.Load<Texture2D>(tileDir + Road.name);
+                Game_Objects.World.Tiles.TileTypesNamespace.Sand.tileTexture =
+                    content.Load<Texture2D>(tileDir + Sand.name);
+                Game_Objects.World.Tiles.TileTypesNamespace.ShallowWater.tileTexture =
+                    content.Load<Texture2D>(tileDir + ShallowWater.name);
+                Game_Objects.World.Tiles.TileTypesNamespace.Wall.tileTexture =
+                    content.Load<Texture2D>(tileDir + Wall.name);
+                Game_Objects.World.Tiles.TileTypesNamespace.Water.tileTexture =
+                    content.Load<Texture2D>(tileDir + Water.name);
+
+
+
             foreach (Actor actor in Lists.ActorList) //ACTOR LOADING
             {
                 try
@@ -53,10 +92,12 @@ namespace WindowsGame1.Engine.Handlers
                     if (actor.isPlayer)
                     {
                         actor.sprite = content.Load<Texture2D>("Actors/playersprite");
+                    Console.WriteLine("Loaded Player Sprite");
                     }
                     else
                     {
                         actor.sprite = content.Load<Texture2D>("Actors/" + actor.name);
+                    Console.WriteLine("Loaded Actor Sprite: " + actor.name);
                     }
                 }
                 catch
@@ -72,7 +113,7 @@ namespace WindowsGame1.Engine.Handlers
             {
                 try
                 {
-                    tile.sprite = content.Load<Texture2D>("Tiles/" + tile.tileType); //This doesn't work as intended, but tile loaded obv should be based on assigned enum value
+               //     tile.sprite = content.Load<Texture2D>("Tiles/" + tile.tileType); //This doesn't work as intended, but tile loaded obv should be based on assigned enum value
                 }
                 catch
                 {
@@ -82,5 +123,8 @@ namespace WindowsGame1.Engine.Handlers
             }
 Console.WriteLine("Finished loading content!");
         }
+
+
+
     }
 }

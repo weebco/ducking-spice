@@ -1,4 +1,5 @@
 ﻿using System;
+using WindowsGame1.Engine.Game_Objects.World.Tiles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
@@ -6,47 +7,58 @@ namespace WindowsGame1.Engine.World
     {
     class Tile
     {
-
-        public enum TileTypes
+        public  enum TileTypesEnum
         {
-            Grass,        //76,255,0
-            Dirt,         //127,51,0
-            Road,         //128,128,128
-            Sand,         //255,255
-            Water,        //0,0,255
-            ShallowWater, //0,255,255
-            Wall,         //64,64,64
-            Black         //0,0,0
+            Black = 0,         //0,0,0
+            Dirt = 1,         //127,51,0
+            Grass = 2,        //76,255,0
+            Road = 3,         //128,128,128
+            Sand = 4,         //255,255
+            ShallowWater = 5, //0,255,255
+            Wall = 6,         //64,64,64
+            Water = 7,        //0,0,255
+
+           
         };
 
+        public TileTypesEnum tileTypesEnum = new TileTypesEnum();
+
+
+        public string name;
         public Boolean isActive = false;
         public Boolean isPassable = false;
         public Boolean isEventTrigger = false;
+        public Boolean isInitialized = false;
         public int eventId = 0;
-        public TileTypes tileType;
         public int position;
         public int coordX, coordY;
         public int tileSizeX, tileSizeY;
         public Vector2 centerCoord = new Vector2();
         public Texture2D sprite;
 
-        public Tile(TileTypes thisTileType, int thisPosition)
+        public TileTypes tileType;
+
+     /*   public Tile( int thisPosition)
         {
-            tileType = thisTileType;
+           // tileType =  thisTileType;
             isActive = true;
             Lists.TileList.Add(this);
             position = thisPosition;
-        }
+            
+        } */
 
         public Tile(int newPosition)
         {
             position = newPosition;
+            isActive = true;
+            tileTypesEnum = TileTypesEnum.Grass ; //TODO remove 4 and instead have it determined by color value
+            Console.WriteLine("Gen Tile #" + position);
         }
 
 
-       static public void delete(Tile victimTile )
+        public void delete(Tile victimTile )
         {
-            victimTile = null;
+             victimTile = null;
         }
 
         public void setPassable(Tile targetTile)
@@ -59,6 +71,5 @@ namespace WindowsGame1.Engine.World
             targetTile.isEventTrigger = true;
             targetTile.eventId = targetEventId;
         }
-
     }
     }
