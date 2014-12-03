@@ -8,15 +8,11 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace WindowsGame1.Engine.Game_Objects.World.Tiles
     {
-    class TileTypes
+  static  class TileTypes
         {
 
-        public static Texture2D tileTexture;
 
-        public TileTypes()
-        {
-            
-        }
+
 
       static  public Texture2D determineTileTexture(Tile tile)
       {

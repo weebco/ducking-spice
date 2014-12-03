@@ -13,7 +13,6 @@ namespace WindowsGame1.Engine
 
         public static List<Tile> TileList = new List<Tile>();
         public static List<Tile> victimTileList = new List<Tile>();
-        public static List<TileTypes> TileTypeList = new List<TileTypes>(); 
         public static List<Rectangle> RectangleList = new List<Rectangle>();
         public static List<Actors.Actor> ActorList = new List<Actor>();
         public static List<Actors.Actor> victimActorList = new List<Actor>();

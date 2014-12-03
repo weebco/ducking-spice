@@ -37,22 +37,13 @@ namespace WindowsGame1.Engine.World
         public Texture2D sprite;
         public Boolean isDrawn = false;
 
-        public TileTypes tileType;
 
-     /*   public Tile( int thisPosition)
-        {
-           // tileType =  thisTileType;
-            isActive = true;
-            Lists.TileList.Add(this);
-            position = thisPosition;
-            
-        } */
 
         public Tile(int newPosition)
         {
             position = newPosition;
             isActive = true;
-            tileTypesEnum = TileTypesEnum.Grass ; //TODO remove 4 and instead have it determined by color value
+            tileTypesEnum = TileTypesEnum.Wall ; //TODO remove 4 and instead have it determined by color value
             Console.WriteLine("Gen Tile #" + position);
         }
 

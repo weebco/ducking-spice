@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Microsoft.Xna.Framework.Graphics;
 
 namespace WindowsGame1.Engine.Game_Objects.World.Tiles.TileTypesNamespace
     {
-    class Dirt : TileTypes
+    class Dirt 
         {
         public static string name = "Dirt";
+        public static Texture2D tileTexture;
+
 
         }
     }
