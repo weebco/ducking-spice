@@ -37,8 +37,8 @@ namespace WindowsGame1.Engine.Actors //"entities" make it sound like sci fi.  "a
 //Fields
 		public String name { get; set; }
 		public int actorID { get; set; }
-		public int HP { get; set; } //HP different than health?
-		public int Health { get; set; }
+		public int currentHP { get; set; } //HP different than health?
+		public int maxHP { get; set; }
 		public int gold { get; set; }
 		static public int STEP = MapHandling.getTileLength();
 //Bools
