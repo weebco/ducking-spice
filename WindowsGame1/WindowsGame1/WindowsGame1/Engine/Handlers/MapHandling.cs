@@ -97,8 +97,8 @@ namespace WindowsGame1.Engine.Handlers
                        counterY++;
                    }
 
-                   tile.coordX -= 20;
-                   tile.coordY -= 20; //adjust for xna being stupid and positioning by top-left corner
+                   tile.coordX -= 50;
+                   tile.coordY -= 36; //adjust for xna being stupid and positioning by top-left corner
                    tile.centerCoord.X = tile.coordX + tileWidth/2; // center is at 20x20 relative in 800x600  
                    tile.centerCoord.Y = tile.coordY + tileHeight/2;
                        //maybe ditch this or switch to two int's instead of vector
