@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using WindowsGame1.Engine.Actors;
 using WindowsGame1.Engine.GameItems;
 using WindowsGame1.Engine.Game_Objects.World.Tiles;
@@ -107,20 +108,7 @@ namespace WindowsGame1.Engine.Handlers
                     //FNF
                 }
             }
-            //It would be much more efficient to only load each tile type once and render it multiple times rather than loading the sprite for every instance of the tile.
-            //This would be done with a Hashtable of TileTypes mapped to Texture2Ds.
-            foreach (Tile tile in Lists.TileList) 
-            {
-                try
-                {
-               //     tile.sprite = content.Load<Texture2D>("Tiles/" + tile.tileType); //This doesn't work as intended, but tile loaded obv should be based on assigned enum value
-                }
-                catch
-                {
-                    Console.WriteLine("Salamander *Wiggle*");
-                    //FNF
-                }
-            }
+ 
 Console.WriteLine("Finished loading content!");
         }
 

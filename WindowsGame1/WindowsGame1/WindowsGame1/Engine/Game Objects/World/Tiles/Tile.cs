@@ -43,7 +43,7 @@ namespace WindowsGame1.Engine.World
         {
             position = newPosition;
             isActive = true;
-            tileTypesEnum = TileTypesEnum.Water ; //TODO remove 4 and instead have it determined by color value
+            tileTypesEnum = TileTypesEnum.Wall ; //TODO remove 4 and instead have it determined by color value
             Console.WriteLine("Gen Tile #" + position);
         }
 

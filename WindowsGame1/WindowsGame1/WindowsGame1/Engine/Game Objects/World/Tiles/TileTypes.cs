@@ -16,6 +16,10 @@ namespace WindowsGame1.Engine.Game_Objects.World.Tiles
 
       static  public Texture2D determineTileTexture(Tile tile)
       {
+          if (tile == null)
+          {
+              return null;
+          }
            int localSwitch = (int) tile.tileTypesEnum;
           
             switch (localSwitch)
