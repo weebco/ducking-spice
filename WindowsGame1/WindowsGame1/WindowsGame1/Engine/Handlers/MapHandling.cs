@@ -90,11 +90,11 @@ namespace WindowsGame1.Engine.Handlers
                    tile.coordX = tileWidth*counterX;
                    tile.coordY = tileWidth*counterY;
                    counterX++;
-                   counterY++;
+                   //counterY++;
                    if (counterX > 18)
                    {
                        counterX = 0;
-                       counterY++;
+                       //counterY++;
                    }
 
                    tile.coordX -= 20;
