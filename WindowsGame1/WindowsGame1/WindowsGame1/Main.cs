@@ -123,12 +123,9 @@ spriteBatch.Begin();
 
      foreach (Tile tile in Lists.TileList)
      {
-         tile.isDrawn = false; //fuck da police
-         if (!tile.isDrawn)
-         {
+
           spriteBatch.Draw(TileTypes.determineTileTexture(tile), tile.centerCoord, Color.White);
-             tile.isDrawn = true;
-         }
+
      }
 
 
