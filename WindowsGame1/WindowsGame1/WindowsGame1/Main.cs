@@ -118,12 +118,16 @@ namespace WindowsGame1
  protected override void Draw(GameTime gameTime)
             {
             Console.WriteLine("Draw Loop Begin");
-GraphicsDevice.Clear(Color.White);
+//GraphicsDevice.Clear(Color.White);
 spriteBatch.Begin();
 
      foreach (Tile tile in Lists.TileList)
      {
-         spriteBatch.Draw(TileTypes.determineTileTexture(tile), new Rectangle(tile.coordX, tile.coordY, MapHandling.tileWidth, MapHandling.tileHeight), Color.White );
+         if (!tile.isDrawn)
+         {
+          spriteBatch.Draw(TileTypes.determineTileTexture(tile), tile.centerCoord, Color.White);
+             tile.isDrawn = true;
+         }
      }
 
 
@@ -140,6 +144,8 @@ spriteBatch.Begin();
 
 
             spriteBatch.End();
+float frameRate = 1 / (float)gameTime.ElapsedGameTime.TotalSeconds; //calculates framerate
+Console.WriteLine("Framerate: " + frameRate);
             base.Draw(gameTime);
          Console.WriteLine("Draw Loop End");
       // Thread.Sleep(2000);

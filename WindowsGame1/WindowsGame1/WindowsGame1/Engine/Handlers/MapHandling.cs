@@ -243,7 +243,7 @@ namespace WindowsGame1.Engine.Handlers
 
            } //end of foreach
            count = 0;
-            
+           reDraw = false;
             Console.WriteLine("Done Generating Tiles!");
             Console.WriteLine(Lists.TileList.Count);
 

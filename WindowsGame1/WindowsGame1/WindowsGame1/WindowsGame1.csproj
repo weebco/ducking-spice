@@ -107,6 +107,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Engine\Game Objects\World\Camera.cs" />
     <Compile Include="Engine\Game Objects\World\Tiles\TileTypes.cs" />
     <Compile Include="Engine\Game Objects\World\Tiles\TileTypesNamespace\Black.cs" />
     <Compile Include="Engine\Game Objects\World\Tiles\TileTypesNamespace\Wall.cs" />

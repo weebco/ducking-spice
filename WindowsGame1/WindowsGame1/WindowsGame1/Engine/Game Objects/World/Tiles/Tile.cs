@@ -35,6 +35,7 @@ namespace WindowsGame1.Engine.World
         public int tileSizeX, tileSizeY;
         public Vector2 centerCoord = new Vector2();
         public Texture2D sprite;
+        public Boolean isDrawn = false;
 
         public TileTypes tileType;
 
