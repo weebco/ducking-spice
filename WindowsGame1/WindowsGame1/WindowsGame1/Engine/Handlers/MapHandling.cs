@@ -54,8 +54,8 @@ namespace WindowsGame1.Engine.Handlers
 
        public static void setTileSize()  //tiles should be 40x40 in 800x600
        {
-           tileHeight = windowHeight/15;  //4:3 ratio to preserve tiles as square
-           tileWidth = windowWidth/20;
+           tileHeight = windowHeight/45;  //4:3 ratio to preserve tiles as square
+           tileWidth = windowWidth/60;
        }
 
        public static int getTileLength()
@@ -72,7 +72,7 @@ namespace WindowsGame1.Engine.Handlers
            GarbageCollection.CollectGarbage(); //removes inactive tiles and resets TileList
            Lists.TileList.Clear();//clean out the list to prevent excessive buildup
            int count = 0;
-           int totalCount = 20*15; //300. Total number of tiles.
+           int totalCount = 60*45; //300. Total number of tiles.
            while (count != totalCount)
            {
                count++;
@@ -91,14 +91,14 @@ namespace WindowsGame1.Engine.Handlers
                    tile.coordY = tileWidth*counterY;
                    counterX++;
                    //counterY++; <- broke it, keeping as a reminder of misdeeds past
-                   if (counterX > 18)
+                   if (counterX > 58)
                    {
                        counterX = 0;
                        counterY++;
                    }
 
-                   tile.coordX -= 50;
-                   tile.coordY -= 36; //adjust for xna being stupid and positioning by top-left corner
+                   tile.coordX -= tileWidth/2;
+                   tile.coordY -= tileHeight/2; //adjust for xna being stupid and positioning by top-left corner
                    tile.centerCoord.X = tile.coordX + tileWidth/2; // center is at 20x20 relative in 800x600  
                    tile.centerCoord.Y = tile.coordY + tileHeight/2;
                        //maybe ditch this or switch to two int's instead of vector
