@@ -12,8 +12,6 @@ namespace WindowsGame1.Engine.Handlers
 {
     class ImageLoader
     {
-
-        public static Boolean loadingComplete = false;
         public static Texture2D st_00;
         public  ImageLoader(ContentManager content) //We -probably- need to add file extensions to these  <-- definitely dont do this 
         {
@@ -112,7 +110,6 @@ namespace WindowsGame1.Engine.Handlers
             }
  
 Console.WriteLine("Finished loading content!");
-            loadingComplete = true;
         }
 
 
