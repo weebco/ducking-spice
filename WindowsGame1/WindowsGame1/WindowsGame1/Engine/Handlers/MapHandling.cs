@@ -127,7 +127,7 @@ namespace WindowsGame1.Engine.Handlers
 //               reDraw = false;
                Console.WriteLine("Done Generating Tiles! Thread 1");
                Console.WriteLine(Lists.TileList.Count);
-               ThreadHandling.tile1Thread.Join(2000);
+               ThreadHandling.tile1Thread.Join(5000);
            }
        }
 

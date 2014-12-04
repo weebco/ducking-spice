@@ -124,38 +124,22 @@ namespace WindowsGame1
  protected override void Draw(GameTime gameTime)
             {
             Console.WriteLine("Draw Loop Begin");
-             RenderTarget2D tileMap = new RenderTarget2D(GraphicsDevice, graphics.PreferredBackBufferWidth,
-                 graphics.PreferredBackBufferHeight);
 //GraphicsDevice.Clear(Color.White);
 spriteBatch.Begin();
-     int x = 1;
      if (!ThreadHandling.tile1Thread.IsAlive && !ThreadHandling.tile2Thread.IsAlive &&
          !ThreadHandling.tile3Thread.IsAlive && !ThreadHandling.tile4Thread.IsAlive)
      {
-         if (x == 1)
+         MapHandling.reDraw = false;
+          Lists.TileList.AddRange(Lists.TileList2 );
+          Lists.TileList.AddRange(Lists.TileList3 );
+          Lists.TileList.AddRange(Lists.TileList4 );
+          Console.WriteLine("All threads off, beginning drawing");
+         foreach (Tile tile in Lists.TileList)
          {
-             x = 2;
+             spriteBatch.Draw(TileTypes.determineTileTexture(tile), tile.centerCoord, Color.White);
 
-             GraphicsDevice.SetRenderTarget(tileMap);
-             GraphicsDevice.DepthStencilState = new DepthStencilState() {DepthBufferEnable = true};
-             MapHandling.reDraw = false;
-             Lists.TileList.AddRange(Lists.TileList2);
-             Lists.TileList.AddRange(Lists.TileList3);
-             Lists.TileList.AddRange(Lists.TileList4);
-             Console.WriteLine("All threads off, beginning drawing");
-             foreach (Tile tile in Lists.TileList)
-             {
-                 spriteBatch.Draw(TileTypes.determineTileTexture(tile), tile.centerCoord, Color.White);
-
-             }
-         GraphicsDevice.SetRenderTarget(null);
- 
          }
-        spriteBatch.Draw(tileMap, new Rectangle(0,0, graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight), Color.White);
-        Console.WriteLine("drew render target");
      }
-
-
 
 
             spriteBatch.End();
