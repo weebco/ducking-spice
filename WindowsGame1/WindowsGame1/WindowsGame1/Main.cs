@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Mime;
 using System.Security.Cryptography.X509Certificates;
 using System.Threading;
 using WindowsGame1.Actors;
@@ -50,11 +51,9 @@ namespace WindowsGame1
             Rectangle backRectangle = new Rectangle(graphics.PreferredBackBufferWidth/2, graphics.PreferredBackBufferHeight/2, graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight);
             base.Initialize();
             Console.WriteLine("Initialization Complete");
-            ThreadHandling.tile1Thread.Start();
-            ThreadHandling.tile2Thread.Start();
-            ThreadHandling.tile3Thread.Start();
-            ThreadHandling.tile4Thread.Start();
-       Thread.Sleep(15000);
+
+            
+       Thread.Sleep(20000);
 
 
             }
@@ -71,6 +70,14 @@ namespace WindowsGame1
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
             new ImageLoader(Content);
+            while (!ImageLoader.loadingComplete)
+            {
+                Thread.Sleep(1000);
+            }
+              ThreadHandling.tile1Thread.Start();
+            ThreadHandling.tile2Thread.Start();
+            ThreadHandling.tile3Thread.Start();
+            ThreadHandling.tile4Thread.Start();
 
             // TODO: use this.Content to load your game content here <-- dont believe their lies
             }
@@ -97,6 +104,7 @@ namespace WindowsGame1
             InputHandling.setInputState();
             if (MapHandling.reDraw && SceneHandling.currentScene == SceneHandling.Scenes.Ingame)
             {
+
             }
 
 
@@ -124,41 +132,22 @@ namespace WindowsGame1
  protected override void Draw(GameTime gameTime)
             {
             Console.WriteLine("Draw Loop Begin");
-             RenderTarget2D tileMap = new RenderTarget2D(GraphicsDevice, graphics.PreferredBackBufferWidth,
-                 graphics.PreferredBackBufferHeight);
-//GraphicsDevice.Clear(Color.White);
+GraphicsDevice.Clear(Color.White);
 spriteBatch.Begin();
-     int x = 1;
-     if (!ThreadHandling.tile1Thread.IsAlive && !ThreadHandling.tile2Thread.IsAlive &&
-         !ThreadHandling.tile3Thread.IsAlive && !ThreadHandling.tile4Thread.IsAlive)
-     {
-         if (x == 1)
-         {
-             x = 2;
-
-             GraphicsDevice.SetRenderTarget(tileMap);
-             GraphicsDevice.DepthStencilState = new DepthStencilState() {DepthBufferEnable = true};
-             MapHandling.reDraw = false;
-             Lists.TileList.AddRange(Lists.TileList2);
-             Lists.TileList.AddRange(Lists.TileList3);
-             Lists.TileList.AddRange(Lists.TileList4);
-             Console.WriteLine("All threads off, beginning drawing");
-             foreach (Tile tile in Lists.TileList)
-             {
-                 spriteBatch.Draw(TileTypes.determineTileTexture(tile), tile.centerCoord, Color.White);
-
-             }
-         GraphicsDevice.SetRenderTarget(null);
- 
-         }
-        spriteBatch.Draw(tileMap, new Rectangle(0,0, graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight), Color.White);
-        Console.WriteLine("drew render target");
-     }
 
 
 
 
-            spriteBatch.End();
+
+
+
+
+
+
+
+
+
+spriteBatch.End();
 float frameRate = 1 / (float)gameTime.ElapsedGameTime.TotalSeconds; //calculates framerate
 Console.WriteLine("Framerate: " + frameRate);
             base.Draw(gameTime);
