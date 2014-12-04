@@ -1,7 +1,7 @@
 Content\Maps\st_00.xnb
 Content\Screens\splash.xnb
-Content\Tiles\Black.xnb
 Content\Tiles\Water.xnb
+Content\Tiles\Black.xnb
 Content\Tiles\Grass.xnb
 Content\Tiles\Road.xnb
 Content\Tiles\Sand.xnb

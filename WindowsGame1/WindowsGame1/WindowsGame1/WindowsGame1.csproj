@@ -117,7 +117,6 @@
     <Compile Include="Engine\Game Objects\World\Tiles\TileTypesNamespace\Dirt.cs" />
     <Compile Include="Engine\Game Objects\World\Tiles\TileTypesNamespace\ShallowWater.cs" />
     <Compile Include="Engine\Game Objects\World\Tiles\TileTypesNamespace\Water.cs" />
-    <Compile Include="Engine\Handlers\ThreadHandling.cs" />
     <Compile Include="Engine\Handlers\ScreenHandling.cs" />
     <Compile Include="Engine\Screens.cs" />
     <Compile Include="Engine\Game Objects\Actors\Actor.cs" />

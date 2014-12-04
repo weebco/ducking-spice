@@ -11,10 +11,7 @@ namespace WindowsGame1.Engine
     internal static class Lists //arrays are for gays
     {
 
-        public static  List<Tile> TileList = new List<Tile>();
-        public static List<Tile> TileList2 = new List<Tile>();
-        public static List<Tile> TileList3 = new List<Tile>();
-        public static List<Tile> TileList4 = new List<Tile>();
+        public static List<Tile> TileList = new List<Tile>();
         public static List<Tile> victimTileList = new List<Tile>();
         public static List<Rectangle> RectangleList = new List<Rectangle>();
         public static List<Actors.Actor> ActorList = new List<Actor>();

@@ -50,13 +50,6 @@ namespace WindowsGame1
             Rectangle backRectangle = new Rectangle(graphics.PreferredBackBufferWidth/2, graphics.PreferredBackBufferHeight/2, graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight);
             base.Initialize();
             Console.WriteLine("Initialization Complete");
-            ThreadHandling.tile1Thread.Start();
-            ThreadHandling.tile2Thread.Start();
-            ThreadHandling.tile3Thread.Start();
-            ThreadHandling.tile4Thread.Start();
-       Thread.Sleep(15000);
-
-
             }
 
         /// <summary>
@@ -97,6 +90,7 @@ namespace WindowsGame1
             InputHandling.setInputState();
             if (MapHandling.reDraw && SceneHandling.currentScene == SceneHandling.Scenes.Ingame)
             {
+                MapHandling.layoutTiles();
             }
 
 
@@ -126,20 +120,25 @@ namespace WindowsGame1
             Console.WriteLine("Draw Loop Begin");
 //GraphicsDevice.Clear(Color.White);
 spriteBatch.Begin();
-     if (!ThreadHandling.tile1Thread.IsAlive && !ThreadHandling.tile2Thread.IsAlive &&
-         !ThreadHandling.tile3Thread.IsAlive && !ThreadHandling.tile4Thread.IsAlive)
-     {
-         MapHandling.reDraw = false;
-          Lists.TileList.AddRange(Lists.TileList2 );
-          Lists.TileList.AddRange(Lists.TileList3 );
-          Lists.TileList.AddRange(Lists.TileList4 );
-          Console.WriteLine("All threads off, beginning drawing");
-         foreach (Tile tile in Lists.TileList)
-         {
-             spriteBatch.Draw(TileTypes.determineTileTexture(tile), tile.centerCoord, Color.White);
 
-         }
+     foreach (Tile tile in Lists.TileList)
+     {
+
+          spriteBatch.Draw(TileTypes.determineTileTexture(tile), tile.centerCoord, Color.White);
+
      }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
             spriteBatch.End();
@@ -147,7 +146,7 @@ float frameRate = 1 / (float)gameTime.ElapsedGameTime.TotalSeconds; //calculates
 Console.WriteLine("Framerate: " + frameRate);
             base.Draw(gameTime);
          Console.WriteLine("Draw Loop End");
-        Console.WriteLine("Current thread states: " + ThreadHandling.tile1Thread.IsAlive + ThreadHandling.tile2Thread.IsAlive + ThreadHandling.tile3Thread.IsAlive + ThreadHandling.tile4Thread.IsAlive );
+      // Thread.Sleep(2000);
             }
         }
     }
